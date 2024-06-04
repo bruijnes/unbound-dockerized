@@ -1,8 +1,10 @@
 services:
   unbound:
     build: .
-    container_name: unbound-dsockerized
+    container_name: unbound-dockerized
     ports:
       - "53:53/udp"
       - "53:53/tcp"
-    
+    volumes:
+      - ./unbound.conf:/app/unbound.conf
+      - ./entrypoint.sh:/app/entrypoint.sh
