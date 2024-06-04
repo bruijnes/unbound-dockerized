@@ -18,8 +18,11 @@ RUN ./configure
 # Build it
 RUN make
 
-# MAke it install
+# Make it install
 RUN make install
+
+# Set required execute permission on entrypoint scipt
+RUN chmod +x /app/entrypoint.sh
 
 # Use the script to startup the unbound daemon.
 ENTRYPOINT [ "/app/entrypoint.sh" ]
