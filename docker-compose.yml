@@ -1,5 +1,5 @@
 services:
-  unbound:
+  unbound-dockerized:
     build: .
     container_name: unbound-dockerized
     ports:
