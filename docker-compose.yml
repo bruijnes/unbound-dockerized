@@ -1,6 +1,6 @@
 services:
   unbound-dockerized:
-    build: .
+    image: bruijnes/unbound-dockerized
     container_name: unbound-dockerized
     ports:
       - "53:53/udp"
@@ -8,3 +8,4 @@ services:
     volumes:
       - ./unbound.conf:/app/unbound.conf
       - ./entrypoint.sh:/app/entrypoint.sh
+    restart: unless-stopped
