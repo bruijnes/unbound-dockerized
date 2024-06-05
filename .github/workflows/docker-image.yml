@@ -10,12 +10,12 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       
-      - name: Verify build directory exists
-        run: ls -la ./build
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
