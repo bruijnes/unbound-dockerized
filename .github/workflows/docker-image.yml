@@ -28,3 +28,4 @@ jobs:
         with:
           push: true
           tags: bruijnes/unbound-dockerized:latest
+          file: ./build/Dockerfile
