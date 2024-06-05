@@ -4,11 +4,11 @@ services:
     image: bruijnes/unbound-dockerized
     container_name: unbound-dockerized
     ports:
-      - "53:53/udp"
+      - "53:53/udp" # Ports and protocol to listen to. Multiple allowed, each on a new line.
       - "53:53/tcp"
     restart: unless-stopped
     environment:
-      - INTERFACE_V4="0.0.0.0"
-      - INTERFACE_V6="::0"
-      - ALLOW_V4="0.0.0.0/0"
-      - ALLOW_V6="::/0"
+      - INTERFACE_V4="0.0.0.0" # Specify listen ipv4 address.
+      - INTERFACE_V6="::0" # Same as above but ipv6.
+      - ALLOW_V4="0.0.0.0/0" #CIDR's allowed to use this DNS. MUltiple CIDR's seperated by spaces.
+      - ALLOW_V6="::/0" # Same as above but ipv6.
