@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Add latest unbound sourcecode to our build.
 ADD https://nlnetlabs.nl/downloads/unbound/unbound-latest.tar.gz /app
-COPY ./entrypoint.sh /app
+COPY ./entrypoint.sh /app/entrypoint.sh
 
 # Unpack the install package
 RUN tar --strip-components=1 -zxvf unbound-latest.tar.gz

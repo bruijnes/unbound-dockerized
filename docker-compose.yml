@@ -1,5 +1,6 @@
 services:
   unbound-dockerized:
+    build: ./build
     image: bruijnes/unbound-dockerized
     container_name: unbound-dockerized
     ports:
