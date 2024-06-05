@@ -30,5 +30,5 @@ jobs:
         with:
           push: true
           tags: bruijnes/unbound-dockerized:latest
-          context: .
+          context: ./build
           file: ./build/Dockerfile
