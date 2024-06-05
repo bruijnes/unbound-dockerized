@@ -7,7 +7,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Add latest unbound sourcecode to our build.
-ADD https://nlnetlabs.nl/downloads/unbound/unbound-latest.tar.gz /app
+ADD https://nlnetlabs.nl/downloads/unbound/unbound-latest.tar.gz /app/unbound-latest.tar.gz
 COPY ./entrypoint.sh /app/entrypoint.sh
 
 # Unpack the install package
