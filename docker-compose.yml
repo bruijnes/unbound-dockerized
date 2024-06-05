@@ -6,6 +6,9 @@ services:
     ports:
       - "53:53/udp"
       - "53:53/tcp"
-    volumes:
-      - ./unbound.conf:/app/unbound.conf
     restart: unless-stopped
+    environment:
+      - INTERFACE_V4="0.0.0.0"
+      - INTERFACE_V6="::0"
+      - ALLOW_V4="0.0.0.0/0"
+      - ALLOW_V6="::/0"

@@ -22,6 +22,10 @@ RUN make
 # Make it install
 RUN make install
 
+# Create required username and group for chroot to work
+RUN groupadd unbound
+RUN useradd -r -g unbound unbound
+
 # Set required execute permission on entrypoint scipt
 RUN chmod 0700 /app/entrypoint.sh
 
