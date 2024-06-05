@@ -17,7 +17,7 @@ server:
     interface: ${INTERFACE_V4}
     interface: ${INTERFACE_V6}
     access-control: ${ALLOW_V4} allow
-    #access-control: ${ALLOW_V6} allow
+    access-control: ${ALLOW_V6} allow
 EOL
 
 # Ensure RW permissions of config file
