@@ -7,5 +7,4 @@ services:
       - "53:53/tcp"
     volumes:
       - ./unbound.conf:/app/unbound.conf
-      - ./entrypoint.sh:/app/entrypoint.sh
     restart: unless-stopped
